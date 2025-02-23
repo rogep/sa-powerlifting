@@ -1,0 +1,40 @@
+    <div 
+      :class="[
+        'flex-1 mt-16 flex justify-center dark:background background items-center h-[calc(100vh-50px)] px-8 transition-all duration-300',
+        displayNav ? 'ml-60 max-w-[90vw] transition-all duration-300' : 'max-w-[100vw] mx-auto'
+      ]"
+    >
+      <div class="dark:navigation navigation p-6 rounded-md shadow-md w-full">
+        <!-- Content -->
+        <DataTable
+          :value="tableData"
+          <!-- v-model:filters="filters" -->
+          scrollable
+          scrollHeight="60vh"
+          sortField="value"
+          :sortOrder="1"
+          <!-- :globalFilterFields="['id', 'id_1', 'value']" -->
+          pt:root="w-full"
+          pt:table="headersmall w-full"
+          pt:headercell="bg-gray-700 header small font-bold p-2"
+          pt:cell="p-2 border-b border-gray-300"
+        >
+          <template #header>
+            <div class="flex justify-between">
+              <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
+              <IconField>
+                <InputIcon class="pi pi-search"/>
+                <!-- <InputText v-model="filters['global'].value" placeholder="Keyword Search" /> -->
+              </IconField>
+            </div>
+          </template>
+          <Column
+            v-for="col in columns"
+            :key="col.field"
+            :field="col.field"
+            :header="col.header"
+            sortable
+          />
+        </DataTable>
+      </div>
+    </div>

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
+.container {
+  font-family: 'Inter', sans-serif;
+}
+
+.headline-5 {
+  letter-spacing: 0.46px;
+  color: #000000;
+  opacity: 1;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.headline-5.thin {
+  font-weight: 100;
+}
+
+.headline-5.bold.large {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #1a202c;
+  opacity: 1;
+}
+
+.dark .headline-5.bold.large {
+  color: #fff; /* White in dark mode */
+}
+
+.header.small {
+  letter-spacing: 0.46px;
+  color: #1a202c;
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.dark .header.small {
+  color: #EAECEF
+}
+
+.background {
+  background-color: #e8e8e8; 
+}
+
+.dark .background {
+  background-color: #000;
+}
+
+
+.navigation {
+  background-color: #fff; 
+  color: #000; 
+}
+
+.dark .navigation {
+  background-color: #000;
+  color: #fff; 
+}
