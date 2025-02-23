@@ -98,7 +98,7 @@ const props = defineProps({
 });
 
 // NOTE: this would be an API, but I am not paying money for a backend server for this dumb app
-fetch('./sa_powerlifting.csv')
+fetch('/sa_powerlifting.csv')
   .then(response => response.text())
   .then(csvText => {
     const result = Papa.parse<PowerliftingRecord>(csvText, {

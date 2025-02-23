@@ -2,6 +2,7 @@
     "name": "vite-unstyled-tailwind",
     "private": true,
     "version": "0.0.0",
+    "homepage": "sapowerlifting.com",
     "type": "module",
     "scripts": {
         "dev": "vite",
